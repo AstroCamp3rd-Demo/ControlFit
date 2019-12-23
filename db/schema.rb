@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2019_12_23_095444) do
     t.string "eat_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.decimal "total_calorie"
   end
 
   create_table "members", force: :cascade do |t|

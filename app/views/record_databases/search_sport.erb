@@ -1,40 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Data</title>
-</head>
-<body>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>Exericse Calorie</h1>
+      <%= form_tag search_sport_record_database_path, :method => 'get' do %>
+        <%= text_field_tag :search_sport, @search_sport %></h3>
+        <%= submit_tag "Search" %>
+        <% end %>
+        <% @sports.each do |sport| %>
+        <h3> 運動名稱:<%= sport.name %></h3>
+        <p>消耗熱量(大卡/公斤體重/小時)：<%= sport.consume %></p>
+        <p>卡洛里(40KG): <%= sport.consume_40kg %></p>
+        <p>卡洛里(50kG): <%= sport.consume_50kg %></p>
+        <p>卡洛里(60kG): <%= sport.consume_60kg %></p>
+        <p>卡洛里(70kG): <%= sport.consume_70kg %></p>
+      <% end %>
+    </div>
+  </div>
+</div> -->
 
-    <div class="container">
-    
-        <div class="row">
-          <div class="col-xs-12 col-sm-8 offset-sm-2">
-            <h1>Exericse Calorie</h1>
-            
-            <%= form_tag search_sport_record_database_path, :method => 'get' do %>
-            <%= text_field_tag :search_sport, @search_sport %></h3>
-            <%= submit_tag "Search" %>
-            <% end %>
 
-
-            <% @sports.each do |sport| %>
-            <h3> 運動名稱:<%= sport.name %></h3>
-            <p>　卡洛里：<%= sport.consume %></p>
-            <p>　卡洛里(40KG)：<%= sport.consume_40kg %></p>
-            <p>　卡洛里(50kG): <%= sport.consume_50kg %></p>
-            <p>  卡洛里(60kG): <%= sport.consume_60kg %></p>
-            <p>  卡洛里(70kG): <%= sport.consume_70kg %></p>
-            <% end %>
-
-          </div>
-        </div>
+<h1>BMR</h1>
+<div class="container">
+  <div class="row">
+    <form action="">
+      <div class="form-group">
+        <label for="">Gender</label>
+        <select name="" id="bmr-gender">
+          <option>male</option>
+          <option>female</option>
+        </select>
       </div>
-
-    
-
-      
-</body>
-</html>
+      <div class="form-group">
+        <label for="">Age</label>
+        <input type="number" name="" id="bmr-age">
+      </div>
+      <div class="form-group">
+        <label for="">Height</label>
+        <input type="text" name="" id="bmr-height">
+      </div>
+      <div class="form-group">
+        <label for="">Weight</label>
+        <input type="text" name="" id="bmr-weight">
+      </div>
+      <div class="form-group">
+        <button id="brm-box">按我</button>
+      </div>
+      <div id="box"></div>
+    </form>
+  </div>
+</div>
+<%= javascript_pack_tag 'BMR-1.js', 'data-turbolinks-track': 'reload' %>

@@ -131,9 +131,9 @@ import moment from "moment";
     let time = moment().format('lll');
     $('.daytime').html(time);
     // --------------------------------
-    let cc = $('.foodsum').text();
+    // let cc = $('.foodsum').text();
 
-    console.log(cc )
+    // console.log(cc )
  
 })
 
