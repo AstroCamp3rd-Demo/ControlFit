@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 $(document).ready(function(){
-  $('#brm-box').click(function(){
+  $('#bmr-box').click(function(){
     let gender = $('#bmr-gender').val();
     let age = $('#bmr-age').val();
     let height = $('#bmr-height').val();
