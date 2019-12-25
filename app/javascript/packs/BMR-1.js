@@ -1,7 +1,9 @@
 import $ from 'jquery'
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $('#bmr-box').click(function(evt){
+    console.log('123');
+    evt.preventDefault();
     let gender = $('#bmr-gender').val();
     let age = $('#bmr-age').val();
     let height = $('#bmr-height').val();
@@ -14,7 +16,6 @@ $(document).ready(function(){
         BMR = (9.7 * weight) + (1.8 * height) - (4.7 * age) + 655
       }
     $('#box').append(BMR)
-    evt.prefentDefault();
     }
   })
 });
