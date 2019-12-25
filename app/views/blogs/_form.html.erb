@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <%= form_with model: blog do |f| %>
+        <%= f.label :title, '標題' %>
+        <%= f.text_field :title, class:'input-group' %>
+        <br>
+        <%= f.label :area, '內容' %>
+        <%= f.text_area :area, class:'input-group', id:'blog-area' %>
+        <br>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
