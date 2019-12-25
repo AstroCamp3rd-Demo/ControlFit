@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 $(document).on('turbolinks:load', function(){
   $('#bmr-box').click(function(evt){
-    console.log('123');
     evt.preventDefault();
     let gender = $('#bmr-gender').val();
     let age = $('#bmr-age').val();
@@ -15,7 +14,7 @@ $(document).on('turbolinks:load', function(){
       }else{
         BMR = (9.7 * weight) + (1.8 * height) - (4.7 * age) + 655
       }
-    $('#box').append(BMR)
+    $('#box').append(`每日需要${BMR} 卡路里`)
     }
   })
 });

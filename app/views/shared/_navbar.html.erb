@@ -19,7 +19,7 @@
         <%= link_to '每日需要', demands_path, class:'nav-link' %>
       </li>
       <li class="nav-item" >
-        <%= link_to '網誌',   blogs_path, class:'nav-link' %>
+        <%= link_to '食譜',   blogs_path, class:'nav-link' %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -29,14 +29,13 @@
         <%= current_member.email %>
         <%= link_to "登出", destroy_member_session_path, method:"delete" %>
       <% else %>
-      <button class="btn btn-outline-success" type="submit">
+      <button class="btn btn-outline-success mr-sm-2" type="submit">
         <%= link_to "註冊", new_member_registration_path %>
       </button>
       <button class="btn btn-outline-success" type="submit">
-        <%= link_to "登入", new_member_session_path, class:'nav-item' %>
+        <%= link_to "登入", new_member_session_path %>
       </button>
       <% end %> 
-      </li>
     </form>
   </div>
 </nav>
