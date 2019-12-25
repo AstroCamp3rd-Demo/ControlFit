@@ -16,6 +16,25 @@ class BlogsController < ApplicationController
     end
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    @blog = Blog.find(params[:id])
+    if @blog.update(blog_params)
+      redirect_to blogs_path
+    else
+      render edit_blog_path
+    end
+  end
+
+  def destroy
+    @blog = Blog.find(params[:id])
+    if @blog.destroy
+      redirect_to blogs_path
+    end
+  end
   private
 
   def blog_params

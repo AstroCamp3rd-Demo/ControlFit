@@ -6,5 +6,6 @@
 <ul>
   <%= b.title %>
   <%= link_to '編輯', edit_blog_path(b) %>
+  <%= link_to '刪除', blog_path(b), method:'delete' %>
 </ul>
 <% end %>
