@@ -10,9 +10,9 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to blog_path, notice:'新增成功'
+      redirect_to blogs_path, notice:'新增成功'
     else
-      render new_blog_path, notice:'新增失敗'
+      render :new, notice:'新增失敗'
     end
   end
 
@@ -23,9 +23,9 @@ class BlogsController < ApplicationController
   def update
     @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
-      redirect_to blogs_path
+      redirect_to blogs_path, notice:'更新成功'
     else
-      render edit_blog_path
+      render :edit, notice:'更新失敗'
     end
   end
 
